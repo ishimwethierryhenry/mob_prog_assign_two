@@ -1,16 +1,16 @@
-# mob_prog_assign_two
+Hello
 
-A new Flutter project.
+Names:ISHIMWE Thierry Henry
 
-## Getting Started
+Id:25319
 
-This project is a starting point for a Flutter application.
+Group:Tuesday(E1)
 
-A few resources to get you started if this is your first Flutter project:
+The following are the screenshots of mobile programming Second assignment of,
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Signup login and implement a simple calculator using flutter under influence of VS Code and Android Studio
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+![Drawer](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/3ecb5299-76b6-4669-a12f-ce9ab0101ab5)
+![signup](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/33d442fe-2aa5-4684-aac4-372940f9d934)
+![login](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/302054ba-f118-4321-94e0-a758a56c8122)
