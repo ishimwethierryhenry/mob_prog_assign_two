@@ -8,24 +8,33 @@ class Calculator extends StatefulWidget {
 class _CalculatorState extends State<Calculator> {
   dynamic displaytxt = 20;
 
-  // Button Widget
+  // Button Widget with updated styling
   Widget calcbutton(String btntxt, Color btncolor, Color txtcolor) {
     return Container(
-      child: ElevatedButton(
+      padding: EdgeInsets.all(10),
+      child: TextButton(
         onPressed: () {
           calculation(btntxt);
         },
         child: Text(
           btntxt,
           style: TextStyle(
-            fontSize: 35,
+            fontSize: 25,
             color: txtcolor,
           ),
         ),
-        style: ElevatedButton.styleFrom(
-          shape: CircleBorder(),
-          backgroundColor: btncolor,
-          padding: EdgeInsets.all(20),
+        style: ButtonStyle(
+          backgroundColor: MaterialStateProperty.all<Color>(btncolor),
+          foregroundColor: MaterialStateProperty.all<Color>(txtcolor),
+          shape: MaterialStateProperty.all<OutlinedBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(20),
+              side: BorderSide(color: Colors.grey.shade400),
+            ),
+          ),
+          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+            EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+          ),
         ),
       ),
     );
@@ -68,66 +77,79 @@ class _CalculatorState extends State<Calculator> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                calcbutton('AC', Colors.grey, Colors.black),
-                calcbutton('+/-', Colors.grey, Colors.black),
-                calcbutton('%', Colors.grey, Colors.black),
-                calcbutton('/', Colors.amber[700]!, Colors.white),
+                calcbutton('AC', Colors.grey.shade700, Colors.white),
+                calcbutton('+/-', Colors.grey.shade700, Colors.white),
+                calcbutton('%', Colors.grey.shade700, Colors.white),
+                calcbutton('/', Colors.amber.shade700, Colors.white),
               ],
             ),
             SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                calcbutton('7', Colors.grey[850]!, Colors.white),
-                calcbutton('8', Colors.grey[850]!, Colors.white),
-                calcbutton('9', Colors.grey[850]!, Colors.white),
-                calcbutton('x', Colors.amber[700]!, Colors.white),
+                calcbutton('7', Colors.grey.shade800, Colors.white),
+                calcbutton('8', Colors.grey.shade800, Colors.white),
+                calcbutton('9', Colors.grey.shade800, Colors.white),
+                calcbutton('x', Colors.amber.shade700, Colors.white),
               ],
             ),
             SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                calcbutton('4', Colors.grey[850]!, Colors.white),
-                calcbutton('5', Colors.grey[850]!, Colors.white),
-                calcbutton('6', Colors.grey[850]!, Colors.white),
-                calcbutton('-', Colors.amber[700]!, Colors.white),
+                calcbutton('4', Colors.grey.shade800, Colors.white),
+                calcbutton('5', Colors.grey.shade800, Colors.white),
+                calcbutton('6', Colors.grey.shade800, Colors.white),
+                calcbutton('-', Colors.amber.shade700, Colors.white),
               ],
             ),
             SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                calcbutton('1', Colors.grey[850]!, Colors.white),
-                calcbutton('2', Colors.grey[850]!, Colors.white),
-                calcbutton('3', Colors.grey[850]!, Colors.white),
-                calcbutton('+', Colors.amber[700]!, Colors.white),
+                calcbutton('1', Colors.grey.shade800, Colors.white),
+                calcbutton('2', Colors.grey.shade800, Colors.white),
+                calcbutton('3', Colors.grey.shade800, Colors.white),
+                calcbutton('+', Colors.amber.shade700, Colors.white),
               ],
             ),
             SizedBox(height: 10),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                // This is button Zero
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    padding: EdgeInsets.fromLTRB(34, 20, 128, 20),
-                    backgroundColor: Colors.grey[850],
-                    shape: StadiumBorder(),
-                  ),
-                  onPressed: () {
-                    calculation('0');
-                  },
-                  child: Text(
-                    '0',
-                    style: TextStyle(
-                      fontSize: 35,
-                      color: Colors.white,
+                // Button Zero
+                Container(
+                  padding: EdgeInsets.all(10),
+                  child: TextButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.grey.shade800),
+                      foregroundColor:
+                          MaterialStateProperty.all<Color>(Colors.white),
+                      shape: MaterialStateProperty.all<OutlinedBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20),
+                          side: BorderSide(color: Colors.grey.shade400),
+                        ),
+                      ),
+                      padding: MaterialStateProperty.all<EdgeInsetsGeometry>(
+                        EdgeInsets.fromLTRB(34, 20, 128, 20),
+                      ),
+                    ),
+                    onPressed: () {
+                      calculation('0');
+                    },
+                    child: Text(
+                      '0',
+                      style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
-                calcbutton('.', Colors.grey[850]!, Colors.white),
-                calcbutton('=', Colors.amber[700]!, Colors.white),
+                calcbutton('.', Colors.grey.shade800, Colors.white),
+                calcbutton('=', Colors.amber.shade700, Colors.white),
               ],
             ),
             SizedBox(height: 10),
