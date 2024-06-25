@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Navigation Demo',
+      title: 'Assignment',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
@@ -62,8 +62,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
-        unselectedItemColor: Colors.grey,
+        selectedItemColor: const Color.fromARGB(255, 129, 113, 93),
+        unselectedItemColor: const Color.fromARGB(255, 238, 13, 13),
         onTap: _onItemTapped,
       ),
       drawer: Drawer(
@@ -72,19 +72,19 @@ class _HomeScreenState extends State<HomeScreen> {
           children: <Widget>[
             DrawerHeader(
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Color.fromARGB(255, 75, 110, 8),
               ),
               child: Text(
                 'Navigation Drawer',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
+                  color: Color.fromARGB(255, 115, 166, 207),
+                  fontSize: 30,
                 ),
               ),
             ),
             ListTile(
               leading: Icon(Icons.login),
-              title: Text('Sign In'),
+              title: Text('LOGIN'),
               onTap: () {
                 Navigator.pop(context);
                 _onItemTapped(0);
