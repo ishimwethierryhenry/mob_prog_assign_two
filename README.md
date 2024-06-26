@@ -8,9 +8,10 @@ Group:Tuesday(E1)
 
 The following are the screenshots of mobile programming Second assignment of,
 
-Signup login and implement a simple calculator using flutter under influence of VS Code and Android Studio
+Designing simple Signup&Login Pages UIs and implement a Simple calculator using flutter under influence of VS Code and Android Studio
 
 
-![Drawer](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/3ecb5299-76b6-4669-a12f-ce9ab0101ab5)
-![signup](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/33d442fe-2aa5-4684-aac4-372940f9d934)
-![login](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/302054ba-f118-4321-94e0-a758a56c8122)
+![login](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/e6dc8a08-57b1-410d-8c47-ba0319323346)
+![Drawer](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/a6156c08-5873-4da0-88b5-d21d81631935)
+![calc](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/ae80913f-8b0e-433a-86b7-6a17a84377cc)
+![signup](https://github.com/ishimwethierryhenry/mob_prog_assign_two/assets/149163309/7d2064d8-61a2-415a-8e3f-f8a100b218b3)
